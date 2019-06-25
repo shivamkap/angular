@@ -3,15 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, FormBuilder, FormGroup }from '@angular/forms';
-import { CustomerFunctions} from './app.customercomponent';
+import { CustomerMenuComponent} from './app.customercomponent';
+import { CustomerFunctionComponent} from './app.CustomerFunctionComponent';
+import {Routes,RouterModule} from '@angular/router';
+
+const router:Routes=[
+    {path:'cust',component:CustomerMenuComponent},
+    {path:'custfun',component:CustomerFunctionComponent}
+]
 
 @NgModule({
     imports: [
-        BrowserModule,HttpClientModule,FormsModule
+        BrowserModule,HttpClientModule,FormsModule,RouterModule.forRoot(router)
         
     ],
     declarations: [
-        AppComponent,CustomerFunctions
+        AppComponent,CustomerMenuComponent,CustomerFunctionComponent
 		],
     providers: [ ],
     bootstrap: [AppComponent]

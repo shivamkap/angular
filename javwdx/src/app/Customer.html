@@ -1,0 +1,108 @@
+<h2> Accept Customer</h2>
+<table>
+    <tr>
+        <td>Email Id</td>
+        <td><input type="text" [(ngModel)]="customer.customerEmail"></td>
+    </tr>
+    <tr>
+        <td>customerFullName</td>
+        <td><input type="text" [(ngModel)]="customer.customerFullName"></td>
+    </tr>
+   
+    <tr>
+        <td>Password</td>
+        <td><input type="text" [(ngModel)]="customer.password"></td>
+    </tr>
+     <tr>
+        <td>Address
+        </td>
+        <td><input type="text" [(ngModel)]="customer.customerAddress"></td>
+    </tr>
+     <tr>
+        <td>City</td>
+        <td><input type="text" [(ngModel)]="customer.customerCity"></td>
+    </tr>
+     <tr>
+        <td>State</td>
+        <td><input type="text" [(ngModel)]="customer.customerState"></td>
+    </tr>
+     <tr>
+        <td>ZipCode</td>
+        <td><input type="text" [(ngModel)]="customer.customerZipCode"></td>
+    </tr>
+    <tr>
+        <td>customerPhoneNumber</td>
+        <td><input type="text" [(ngModel)]="customer.customerPhoneNumber"></td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td><input type="text" [(ngModel)]="customer.country"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Add Customer" (click)="addCustomer()"/></td>
+    </tr><br/>
+
+</table>
+
+<h2>Get Cutomer Details</h2>
+<table>
+    <tr>
+        <td>customerId</td>
+        <td><input type="text" [(ngModel)]="customerId"></td>
+        <td><input type="button" value="Search" (click)="getCustomerDetails()"/></td>
+    </tr>
+    <br/>
+</table>
+
+<h2>All customer details</h2>
+<table>
+    <tr>
+        <td><input type="button" value="Get All" (click)="getAllCustomerDetails()"/></td>
+    </tr>
+    <br/>
+</table>
+
+ <table border="1">
+ <tr>
+        <th>Full Name</th>
+        <th>Email Id</th>
+        <th>Phone Number</th>
+        <th>Country</th>
+        <th>Address</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Zip Code</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>{{customerone.customerFullName}}</td>
+        <td>{{customerone.customerEmail}}</td>
+        <td>{{customerone.customerPhoneNumber}}</td>
+        <td>{{customerone.country}}</td>
+        <td>{{customerone.state}}</td>
+        <td>{{customerone.customerCity}}</td>
+        <td>{{customerone.customerAddress}}</td>
+        <td>{{customerone.customerZipCode}}</td>
+        <td><input type="button" value="Delete" (click)="deleteProduct(i)"/></td>
+    </tr>
+     <tr *ngFor="let customer of customer">
+        <td>{{customer.customerFullName}}</td>
+        <td>{{customer.customerEmail}}</td>
+        <td>{{customer.customerPhoneNumber}}</td>
+        <td>{{customer.country}}</td>
+        <td>{{customer.state}}</td>
+        <td>{{customer.customerCity}}</td>
+        <td>{{customer.customerAddress}}</td>
+        <td>{{customer.customerZipCode}}</td>
+    </tr>
+    <br/>
+ </table>
+
+<h2>Delete Cutomer Details</h2>
+<table>
+    <tr>
+        <td>customerId</td>
+        <td><input type="text" [(ngModel)]="customerId"></td>
+        <td><input type="button" value="Delete" (click)="deleteCustomer()"/></td>
+    </tr>
+</table>
