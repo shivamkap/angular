@@ -1,0 +1,36 @@
+ <table border="1">
+
+ <tr>
+        <th>Full Name</th>
+        <th>Email Id</th>
+        <th>Phone Number</th>
+        <th>Country</th>
+        <th>Address</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Zip Code</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>{{customerone.customerFullName}}</td>
+        <td>{{customerone.customerEmail}}</td>
+        <td>{{customerone.customerPhoneNumber}}</td>
+        <td>{{customerone.country}}</td>
+        <td>{{customerone.state}}</td>
+        <td>{{customerone.customerCity}}</td>
+        <td>{{customerone.customerAddress}}</td>
+        <td>{{customerone.customerZipCode}}</td>
+        <td><input type="button" value="Delete" (click)="deleteProduct(i)"/></td>
+        <td><input type="button" value="Edit" (click)="editProduct(i)"/></td>
+    </tr>
+     <tr *ngFor="let customer of customer">
+        <td>{{customer.customerFullName}}</td>
+        <td>{{customer.customerEmail}}</td>
+        <td>{{customer.customerPhoneNumber}}</td>
+        <td>{{customer.country}}</td>
+        <td>{{customer.state}}</td>
+        <td>{{customer.customerCity}}</td>
+        <td>{{customer.customerAddress}}</td>
+        <td>{{customer.customerZipCode}}</td>
+    </tr>
+ </table>

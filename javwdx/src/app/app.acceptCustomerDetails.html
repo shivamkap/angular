@@ -1,0 +1,60 @@
+<h2> Accept Customer</h2>
+<table>
+    <tr>
+        <td>Email Id</td>
+        <td><input type="text" [(ngModel)]="customer.customerEmail"></td>
+    </tr>
+    <tr>
+        <td>customerFullName</td>
+        <td><input type="text" [(ngModel)]="customer.customerFullName"></td>
+    </tr>
+   
+    <tr>
+        <td>Password</td>
+        <td><input type="text" [(ngModel)]="customer.password"></td>
+    </tr>
+     <tr>
+        <td>Address
+        </td>
+        <td><input type="text" [(ngModel)]="customer.customerAddress"></td>
+    </tr>
+     <tr>
+        <td>City</td>
+        <td><input type="text" [(ngModel)]="customer.customerCity"></td>
+    </tr>
+     <tr>
+        <td>State</td>
+        <td><input type="text" [(ngModel)]="customer.customerState"></td>
+    </tr>
+     <tr>
+        <td>ZipCode</td>
+        <td><input type="text" [(ngModel)]="customer.customerZipCode"></td>
+    </tr>
+    <tr>
+        <td>customerPhoneNumber</td>
+        <td><input type="text" [(ngModel)]="customer.customerPhoneNumber"></td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td><input type="text" [(ngModel)]="customer.country"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Add Customer" (click)="addCustomer()"/></td>
+    </tr>
+</table>
+
+
+    
+</table>
+
+<h2>Delete Cutomer Details</h2>
+<table>
+    <tr>
+        <td>customerId</td>
+        <td><input type="text" [(ngModel)]="customerId"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Delete" (click)="deleteCustomer()"/></td>
+    </tr>
+</table>
+
